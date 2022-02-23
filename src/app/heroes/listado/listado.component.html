@@ -1,0 +1,29 @@
+<p>listado Heroes</p>
+
+<!-- DIRECTIVA *nFor-->
+
+<button (click)="borrarHeroe()">Borrar heroe</button>
+
+<!-- //condicion if -->
+<div *ngIf="nombreHeroe; else divMensaje"> 
+    <h3>Heroe borrado :</h3>
+    <span>
+        {{nombreHeroe}}
+    </span>
+</div>
+
+<ng-template #divMensaje>
+    <span>No ha borrado nada.</span>
+</ng-template>
+
+
+<div>
+<!-- CICLO FOR -->
+    <ul>
+        <li *ngFor="let heroe of heroes"> 
+             {{heroe}}
+        </li>
+    </ul>
+    
+</div>
+
